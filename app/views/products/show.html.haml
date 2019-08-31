@@ -1,0 +1,41 @@
+.show-contents
+  .show-contents__content
+    .show-contents__content__title 
+      = @product.title
+    .show-contents__content__image
+      = image_tag "#{@product.image}"
+    - if user_signed_in? && current_user.id == @product.user_id
+      %ul.show-contents__content__lists
+        %li.show-contents__content__lists__list
+          = link_to '編集', "/products/#{@product.id}/edit", method: :get, class: 'show-contents__content__lists__list__text'
+        %li.show-contents__content__lists__list
+          = link_to '削除', "/products/#{@product.id}", method: :delete, class: 'show-contents__content__lists__list__text'
+      .show-contents__content__name
+        = @product.user.name
+    .show-contents__content__container
+      - if current_user
+        = form_tag("/products/#{@product.id}/comments", method: :post) do
+          %textarea{:cols => "30", :name => "comment", :placeholder => "コメントする", :rows => "2"}
+          %input{:type => "submit", :value => "SENT"}/
+      .show-contents__content__container__comments
+        %h4 ＜コメント一覧＞
+        - if @comments
+          - @comments.each do |comment|
+            %p
+              %strong
+                = link_to comment.user.name, "/"
+                ：
+              = comment.comment
+
+    %br
+    %a.show-contents__content__back{:href => "/"} back    
+        
+        
+
+
+
+
+
+
+
+-# %a{:href => "/users/#{@product.user.id}"}

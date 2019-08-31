@@ -1,0 +1,17 @@
+.footer{
+  background-color: #565654;
+  color: #fff;
+  padding-bottom: 80px;
+  
+
+  &__left-text {
+    width: 50%;
+    height: 50px;
+    float: left;
+  }
+  &__right-text{
+    width: 50%;
+    height: 50px;
+    float: right;
+  }
+}

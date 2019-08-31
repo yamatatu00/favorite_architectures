@@ -1,0 +1,16 @@
+.newproduct-contents
+  = form_with(model: @product, local: true) do |form| 
+    .newproduct-contents__top
+      %h3.newproduct-contents__top__content edit product
+    %ul.newproduct-contents__lists
+      %li.newproduct-contents__lists__title
+        = form.text_field :title, placeholder: "title",  value: @product.title
+      %li.newproduct-contents__lists__image
+        = form.text_field :image, placeholder: "image",  value: @product.image
+      %li.newproduct-contents__lists__text
+        = form.text_area :text, placeholder: "text",  value: @product.text
+      %li.newproduct-contents__lists__btn
+        = form.submit "send"
+      %li.newproduct-contents__lists__back
+        %a.show-contents__content__back{:href => "/"} back
+

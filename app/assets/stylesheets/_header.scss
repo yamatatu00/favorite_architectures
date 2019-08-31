@@ -1,0 +1,40 @@
+.header{
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 40px 0;
+  line-height: 50px;
+  z-index: 9999;
+
+  &__inner{
+    
+    &__logo{
+      float: left;
+      height: 50px;
+      width: 50px;
+
+      &__sound{
+        width: 250px;
+        height: 40px;
+        opacity: 0.2;
+      }
+    }
+
+    &__nav{
+      float: right;
+      display: flex;
+      text-decoration: none;
+      
+      &__item{
+        color: #ffffff;
+        padding: 0 15px;
+        font-size: 18px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+

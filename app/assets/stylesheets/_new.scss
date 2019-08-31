@@ -1,0 +1,84 @@
+.newproduct-contents{
+  height: 100vh;
+  background-color: #252625;
+  
+ 
+
+
+  &__top{
+    
+    height: 50px;
+    padding-top: 50px;
+
+    &__content{
+      font-weight: bold;
+      color: white;
+      z-index: 1000;
+    }
+
+    
+
+  }
+
+  &__lists{
+    
+    
+
+    &__title input{
+      height: 40px;
+      border:0;
+      padding:10px;
+     
+      
+      margin:0 0 20px;
+      width:300px;
+
+
+     
+      
+    }
+    &__image input{
+      height: 40px;
+      border:0;
+      padding:10px;
+     
+      
+      margin:0 0 20px;
+      width:300px
+    }
+    &__text{
+      
+
+    }
+    &__text textarea{
+      height: 40px;
+      border:0;
+      padding:10px;
+      
+
+      margin:0 0 20px;
+      width:300px
+
+    }
+    &__btn input{
+      width: 100px;
+      height: 20px;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 4px;
+      background-color: #fff;
+      color: #565654;
+      text-decoration: none;
+      letter-spacing: 1px;
+      font-size: 0.7rem;
+    }
+
+    
+  }
+  
+  
+}
+
+
+
+

@@ -8,19 +8,14 @@
       height: 50px;
       font-size: 20px;
       font-weight: bold;
-
     }
-
-
     &__image{
       padding-bottom: 50px;
     }
-
     &__image img{
       max-width: 500px;
       max-height: 400px;
     }
-
     &__lists{
       
       &__list{
@@ -28,25 +23,14 @@
 
         &__text{
           color: #fff;
-
         }
       }
     }
-
     &__name{
       margin: 10px;
-
     }
     &__back{
       color: #fff;
-      
-
     }
-    
-
   }
-
-  
-  
-
 }

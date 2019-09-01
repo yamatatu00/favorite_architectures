@@ -1,0 +1,25 @@
+.about
+  .about__sections
+    .about__sections__texts
+      %p.about__sections__texts__first about me
+      .about__sections__texts__bodies 
+        .about__sections__texts__bodies__left-body 
+          %a.about__sections__texts__bodies__left-body__left-message testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+          .about__sections__texts__bodies__left-body__buttons
+            %a.about__sections__texts__bodies__left-body__buttons__button{:href => "#about"} contact
+            %input#text1{:type => "text", :value => ""}/
+            %input#btn1.btn.btn-success{:onclick => "test1()", :type => "button", :value => "テスト"}/
+        .about__sections__texts__bodies__right-body
+          %a.about__sections__texts__bodies__right-body__right-message
+            nishi
+            %br 
+            osaka-city, OSAKA, JAPAN 
+            %br
+            %br
+            T 123-456-789 
+            %br
+            F 987-654-321
+            %br
+            hoge@test.com
+    .about__sections__image
+      = image_tag 'tim-stief-dH6IjhWHNQQ-unsplash.jpg'

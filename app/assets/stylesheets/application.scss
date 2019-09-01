@@ -19,18 +19,17 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-@import "./user";
+@import "./layouts/header";
+@import "./layouts/footer";
 
-@import "./header";
-@import "./topmain";
-@import "./products";
-@import "./about";
-@import "./footer";
+@import "./devise/user";
 
-@import "./new";
-@import "./show";
+@import "./users&products/show";
 
-
+@import "./products/topmain";
+@import "./products/products";
+@import "./products/about";
+@import "./products/new";
 
 body {
   color: #fff;

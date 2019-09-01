@@ -48,7 +48,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- has_many_attached :images
+- has_one_attached :image
 - has_many   :comments
 
 

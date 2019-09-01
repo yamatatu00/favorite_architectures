@@ -13,7 +13,7 @@
             - @products.each do |product| 
               %div
                 -if product.image.present?
-                  =image_tag "#{product.image}"
+                  =image_tag product.image
                 -else
                   =image_tag "pnenoimgs001.gif"
                 %p

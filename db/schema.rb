@@ -10,26 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_31_064918) do
+ActiveRecord::Schema.define(version: 2019_09_01_050539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "product_id"
-    t.text "comment"
+    t.text "comment", null: false
+    t.bigint "user_id"
+    t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_comments_on_product_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: false
     t.text "text"
-    t.text "image"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer "user_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_products_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -40,9 +42,13 @@ ActiveRecord::Schema.define(version: 2019_07_31_064918) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
+    t.string "name", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["name"], name: "index_users_on_name", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "products"
+  add_foreign_key "comments", "users"
+  add_foreign_key "products", "users"
 end

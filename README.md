@@ -22,3 +22,56 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## usersテーブル
+
+|Column           |Type    |Options                         |
+|-----------------|--------|--------------------------------|
+|name             |string  |null: false,unique: true        |
+|email            |string  |null: false,unique: true        |
+|password         |string  |null: false                     |
+
+### Association
+- has_many :products
+- has_many :comments
+
+
+
+## productsテーブル
+
+|Column           |Type       |Options                         |
+|-----------------|-----------|--------------------------------|
+|title            |string     |null: false                     |
+|text             |string     |                                |
+|user_id          |references |null: false,foreign_key: true   |
+
+### Association
+- belongs_to :user
+- has_many_attached :images
+- has_many   :comments
+
+
+
+
+## commentsテーブル
+
+|Column           |Type       |Options                         |
+|-----------------|-----------|--------------------------------|
+|comment          |text       |null: false                     |
+|user_id          |references |null: false,foreign_key: true   |
+|product_id       |references |null: false,foreign_key: true   |
+
+### Association
+- belongs_to :product
+- belongs_to :user
+
+
+## activestoragesテーブル
+
+|name             |record_type    |
+|-----------------|---------------|
+|image            |product        |
+
+### Association
+- belongs_to :product

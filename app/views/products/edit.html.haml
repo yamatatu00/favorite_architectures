@@ -1,16 +1,24 @@
 .newproduct-contents
   = form_with(model: @product, local: true) do |form| 
     .newproduct-contents__top
-      %h3.newproduct-contents__top__content edit product
+      %h3.newproduct-contents__top__content edit Architectural photo
     %ul.newproduct-contents__lists
+      %li.newproduct-contents__lists__image
+        #img_field{onclick: "$('#file').click()"}
+          - if controller.action_name == "new" 
+            = form.file_field :image, placeholder: "image", id: "file",class: "image-form"
+          -else
+            - if @product.image.attached? 
+              = image_tag @product.image 
+            - else 
+              =image_tag "pnenoimgs001.gif"
+        = form.file_field :image, placeholder: "image",  value: @product.image, style: "display:none;", id: "file"
       %li.newproduct-contents__lists__title
         = form.text_field :title, placeholder: "title",  value: @product.title
-      %li.newproduct-contents__lists__image
-        = form.file_field :image, placeholder: "image",  value: @product.image
       %li.newproduct-contents__lists__text
         = form.text_area :text, placeholder: "text",  value: @product.text
       %li.newproduct-contents__lists__btn
-        = form.submit "send"
+        = form.submit "edit"
       %li.newproduct-contents__lists__back
-        %a.show-contents__content__back{:href => "/"} back
+        = link_to 'back', root_path
 

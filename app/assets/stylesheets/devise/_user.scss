@@ -1,12 +1,42 @@
-.contents.row{
+.contents{
   height: 100vh;
   background-color: #252625;
-  padding: 100px;
-}
-.content_post img{
-  width: 200px;
+
+  &__content{
+    height: 100%;
+    background-color: #252625;
+    padding: 100px;
+
+    &__head{
+      font-size: 25px;
+      padding-bottom: 50px;
+    }
+    &__field{
+      label{
+        font-size: 18px;
+      }
+      input{
+        font-size: 12px;
+        width: 200px;
+        padding: 5px;
+        margin: 10px 0 40px;
+        border-radius: 5px;
+      }
+    }
+    &__actions{
+      padding-bottom: 20px;
+      input{
+      width: 100px;
+      height: 20px;
+      margin: 10px;
+      background-color: #fff;
+      color: #565654;
+      text-decoration: none;
+      }
+    }
+    a {
+      color: #fff;
+    }
+  }
 }
 
-// .mypage{
-//   height: 100%;
-// }

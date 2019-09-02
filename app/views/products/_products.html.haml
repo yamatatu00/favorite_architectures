@@ -12,7 +12,7 @@
           .products__sections__section__scroll-fade__ex1.scroll-fade-row
             - @products.each do |product| 
               %div
-                -if product.image.present?
+                -if product.image.attached?
                   =image_tag product.image
                 -else
                   =image_tag "pnenoimgs001.gif"

@@ -1,13 +1,8 @@
 .topmain{
   
-
   &__slider{
     position: relative;
     width: 100%;
-
-    
-      
-
     
     &__left-contents{
       position: absolute;
@@ -21,37 +16,20 @@
         color: white;
         max-height: 100vh;
         line-height: 90px;
-  
-        
-  
+
         &__site-title-sub{
-          // height: 10%;
           color: white;
-          font-size: 30px;
-          
-
-          
+          font-size: 30px; 
         }
-        
         &__site-title{
-          // height: 25%;
-          // color: white;
           font-size: 80px;
-          font-weight: bold;
-          
+          font-weight: bold; 
         }
-
         &__site-description{
-          // height: 65%;
-          // color: white;
           font-size: 30px;
-        }
-
-
-        
+        }   
       }
-    }
-      
+    } 
     &__right-contents{
       position: absolute;
       top: 0;
@@ -59,10 +37,7 @@
       width: 40%;
       height: 100vh;
     }
-  
-  
   }
-
   &__slider img {
     transform-origin: center top;
     transform: scale(1.1);

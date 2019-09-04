@@ -2,11 +2,11 @@
   .header__inner
     .header__inner__logo 
       -# %i.fa.fa-play.fa-3x
-      %audio{controls:  "", src: "http://bbcsfx.acropolis.org.uk/assets/07069060.wav", class: 'header__inner__logo__sound'}
-      %audio{controls: "", src: "http://bbcsfx.acropolis.org.uk/assets/07075037.wav", class: 'header__inner__logo__sound'}
-    %a.header__inner__nav{:href => '/'}
+      -# %audio{controls:  "", src: "http://bbcsfx.acropolis.org.uk/assets/07069060.wav", class: 'header__inner__logo__sound'}
+      -# %audio{controls: "", src: "http://bbcsfx.acropolis.org.uk/assets/07075037.wav", class: 'header__inner__logo__sound'}
+    = link_to root_path, class: "header__inner__nav" do
       %p.header__inner__nav__item about me
-    %a.header__inner__nav{:href => new_product_path}
+    = link_to new_product_path, class: "header__inner__nav" do
       %p.header__inner__nav__item product new
   - if user_signed_in?
     .header__inner__nav

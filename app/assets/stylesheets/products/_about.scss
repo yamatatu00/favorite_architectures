@@ -7,7 +7,6 @@
     display: flex;
     position: relative;
     
-
     &__texts{
       width: 100%;
       z-index: 10;
@@ -18,9 +17,7 @@
         font-size: 30px;
         padding-right: 700px;
         font-weight: bold;
-
       }
-
       &__bodies{
         width: 100%;
       
@@ -46,11 +43,8 @@
               background-color: #fff;
               color: black;
               text-decoration: none;
-              letter-spacing: 1px;
-              font-size: 0.7rem;
-            
-            }
-            
+              font-size: 12px; 
+            } 
           }
           &__buttons a{
             opacity: 0.2;
@@ -58,7 +52,6 @@
           &__buttons a:hover{
             opacity: 0.3;
           }
-
         }
         &__right-body{
           float: right;
@@ -83,15 +76,12 @@
       height: auto;
       -webkit-transition: all 1s;
       -webkit-transform: translate(0, 0);
-      opacity: 1;
-          
+      opacity: 1;     
     }
     &__image img.move {
       -webkit-transform: translate(-10px, 0);
       opacity: 0.1;
     }
-  
-    
   }
 }
 

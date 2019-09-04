@@ -69,3 +69,4 @@ gem "jquery-rails"
 gem 'font-awesome-sass', '~> 5.0.6'
 gem 'devise'
 gem  "watson-api-client"
+gem 'aws-sdk-s3', require: false

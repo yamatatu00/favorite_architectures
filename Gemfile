@@ -67,6 +67,6 @@ gem 'sprockets', '3.7.2'
 gem "haml-rails"
 gem "jquery-rails"
 gem 'font-awesome-sass', '~> 5.0.6'
-gem 'devise'
+gem  "devise", ">= 4.7.1"
 gem  "watson-api-client"
 gem 'aws-sdk-s3', require: false

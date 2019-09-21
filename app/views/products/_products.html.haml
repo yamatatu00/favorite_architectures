@@ -4,8 +4,8 @@
       -if controller_name == "products"
         %h1.products__sections__header__text.glitch.is-glitching{"data-text" => "Check out your  Favorite Architectural Photos"} Check out your  Favorite Architectural Photos
       - elsif controller_name == "users"
-        %h1.products__sections__header__text.glitch.is-glitching{"data-text" => "#{@name}さんの投稿一覧"} 
-          =  @name + 'さんの投稿一覧'
+        %h1.products__sections__header__text.glitch.is-glitching{"data-text" => "#{@name}'s Posts List"} 
+          =  @name + "'s Posts List"
     .products__sections
       .products__sections__section
         .products__sections__section__scroll-fade
@@ -33,7 +33,7 @@
                           %li.products__sections__section__scroll-fade__ex1__buttons__button
                             = link_to 'delete', "/products/#{product.id}", method: :delete, class: 'products__sections__section__scroll-fade__ex1__buttons__button__text'
           -if controller_name == "users"
-            = link_to 'back', root_path
+            = link_to 'back', root_path, class: "products__sections__section__scroll-fade__ex1__back"
           
 
 

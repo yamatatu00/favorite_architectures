@@ -4,7 +4,7 @@
       -# %i.fa.fa-play.fa-3x
       -# %audio{controls:  "", src: "http://bbcsfx.acropolis.org.uk/assets/07069060.wav", class: 'header__inner__logo__sound'}
       -# %audio{controls: "", src: "http://bbcsfx.acropolis.org.uk/assets/07075037.wav", class: 'header__inner__logo__sound'}
-    = link_to root_path, class: "header__inner__nav" do
+    %a#about.header__inner__nav
       %p.header__inner__nav__item about me
     = link_to new_product_path, class: "header__inner__nav" do
       %p.header__inner__nav__item product new

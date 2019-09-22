@@ -1,27 +1,15 @@
-# README
+# アプリ詳細（※現在開発中）
+画像投稿アプリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 開発環境
+Ruby、JavaScript、Ruby on Rails、VScode、PostgreSQL、MacOS
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 実装した機能
+ユーザ新規登録(deviseのgemを使用)
+ユーザログイン・ログアウト機能
+画像投稿(ストレージ:AWS S3, アップローダー:active strage)
+投稿機能（新規投稿、編集、削除）
+投稿へのコメント機能（Ajaxによる非同期通信）
 
 
 ## usersテーブル

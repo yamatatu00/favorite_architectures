@@ -2,7 +2,7 @@
 画像投稿アプリです。
 
 # 開発環境
-Ruby、JavaScript、Ruby on Rails、VScode、PostgreSQL、MacOS
+Haml、SCSS、Ruby、JavaScript、Ruby on Rails、VScode、PostgreSQL、MacOS、HEROKU
 
 # 実装した機能
 ユーザ新規登録(deviseのgemを使用)

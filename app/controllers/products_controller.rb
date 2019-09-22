@@ -1,10 +1,8 @@
 class ProductsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
-  #before_action :ausetic_user
 
   def index
     @products = Product.all.includes(:user).order('id DESC')
-    
   end
 
   def new
@@ -13,18 +11,22 @@ class ProductsController < ApplicationController
 
   def create
     @products = Product.create(product_params)
+    unless @products.save
+      render :new
+    end
   end
 
   def show
     @product = Product.find(params[:id])
-    @comments = @product.comments.includes(:user)
+    @comments = @product.comments.includes(:user).order(id: "DESC")
   end
-
 
   def destroy
     product = Product.find(params[:id])
     if product.user_id == current_user.id
       product.destroy
+    else
+      render :index
     end
   end
 
@@ -36,13 +38,14 @@ class ProductsController < ApplicationController
     product = Product.find(params[:id])
     if product.user_id == current_user.id
       product.update(product_params)
+    else
+      render :edit
     end
   end
 
   
   private
   def product_params
-  
     params.require(:product).permit(:title, :image, :text).merge(user_id: current_user.id)
   end
 

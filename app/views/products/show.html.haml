@@ -4,7 +4,10 @@
       title :
       = @product.title
     .show-contents__content__image
-      = image_tag @product.image
+      -if @product.image.attached?
+        =image_tag @product.image
+      -else
+        =image_tag "pnenoimgs001.gif"
     - if user_signed_in? && current_user.id == @product.user_id
       %ul.show-contents__content__lists
         %li.show-contents__content__lists__list
@@ -16,11 +19,11 @@
         = @product.user.name
     .show-contents__content__container
       - if current_user
-        = form_with(model: @comment, url: product_comments_path(@product.id), method: :post, local: true, class: "show-contents__content__container__textarea") do |form|
+        = form_with(model: @comment, url: product_comments_path(@product.id), method: :post, class: "show-contents__content__container__textarea", id: "new-comment") do |form|
           = form.text_area :comment, placeholder: "コメントする"
           = form.submit value: "SENT"
+      %h4.show-contents__content__container__title ＜コメント一覧＞
       .show-contents__content__container__comments
-        %h4 ＜コメント一覧＞
         - if @comments
           - @comments.each do |comment|
             %p

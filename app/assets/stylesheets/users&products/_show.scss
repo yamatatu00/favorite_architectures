@@ -64,8 +64,14 @@
           cursor: pointer;
         } 
       }
+      &__title{
+        padding-top: 30px;
+      }
       &__comments{
         padding-top: 20px;
+        word-wrap: break-word;
+        width: 500px;
+        margin: 0 auto;
         h4{
           font-size: 16px;
           line-height: 50px;

@@ -5,10 +5,11 @@
 Haml、SCSS、Ruby、JavaScript、Ruby on Rails、VScode、PostgreSQL、MacOS、HEROKU
 
 # 実装した機能
-ユーザ新規登録・ユーザログイン・ログアウト機能(deviseのgemを使用)
-画像投稿(ストレージ:AWS S3, アップローダー:active strage)
-投稿機能（新規投稿、編集、削除）
-モーダルウィンドウから投稿詳細、編集、削除の各ビューに遷移
+ユーザ新規登録・ユーザログイン・ログアウト機能(deviseのgemを使用)  
+画像投稿(ストレージ:AWS S3, アップローダー:active strage)  
+投稿機能（新規投稿、編集、削除）  
+モーダルウィンドウから投稿詳細、編集、削除の各ビューに遷移  
+ページネーション導入（kaminariのgemを使用）  
 各投稿へのコメント機能（Ajaxによる非同期通信）
 
 

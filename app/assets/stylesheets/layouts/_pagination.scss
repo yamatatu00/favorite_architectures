@@ -1,0 +1,21 @@
+.pagination>span>a {          
+  border: none;    
+  color: #696969;   
+  text-decoration: none;
+  margin: 5px;
+}
+
+#current-page {     
+  background: #bdbcbc;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #696969;
+  text-align:center;
+  margin: 5px;
+  display: inline-block;
+}
+
+.pagination>span>a:hover {
+  opacity: 0.5;
+}

@@ -23,6 +23,7 @@
                   %br
                   = "title : " + product.title
                   %br
-          -if controller_name == "users"
-            = link_to 'back', root_path, class: "products__sections__section__scroll-fade__ex1__back"
+    = paginate @products
+    -if controller_name == "users"
+      = link_to 'back', root_path, class: "products__sections__section__scroll-fade__ex1__back"
 = render "layouts/details-modal"

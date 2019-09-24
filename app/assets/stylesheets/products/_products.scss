@@ -40,6 +40,9 @@
           &__image{
             cursor: pointer;
           }
+          &__image:hover{
+            opacity: 0.5;
+          }
           &__back{
             color: #fff;
           }
@@ -53,12 +56,11 @@
           max-width: 200px;
           height: 200px;
           object-fit: cover;
-        } 
+        }
       }
     }
   }
 }
-
 .glitch {
   position: relative;
   color: white;

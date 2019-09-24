@@ -70,3 +70,4 @@ gem 'font-awesome-sass', '~> 5.0.6'
 gem "devise", ">= 4.7.1"
 gem  "watson-api-client"
 gem 'aws-sdk-s3', require: false
+gem 'kaminari'

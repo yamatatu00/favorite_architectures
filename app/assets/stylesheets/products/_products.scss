@@ -4,6 +4,7 @@
   background-color: #252625;
 
   &__sections{
+    background-color: #252625;
     padding: 80px;
 
     &__header{
@@ -16,7 +17,6 @@
     }
     &__section{
       &__scroll-fade{
-      
         &__ex1{
           display: flex;
           flex-wrap : wrap;
@@ -37,35 +37,8 @@
             width: 240px;
             height:0;
           }
-          &__buttons {
-            padding: 20px 0 0 0 !important; 
-            display: flex;
-    
-            &__button{
-              width: 60px ;
-              height: 20px ;
-              margin: 10px 10px 10px 0;
-              border-radius: 5px;
-              background-color: #fff;
-              color: #565654;
-              letter-spacing: 1px;
-              font-size: 0.7rem;
-              a{
-                text-align: center;
-              }
-              &__text{
-                text-decoration: none;
-                font-weight: bold;
-                line-height: 20px;
-                font-size: 10px;  
-              }
-            }
-          }
-          &__buttons li{ 
-            opacity: 0.2; 
-          }
-          &__buttons li:hover{
-            opacity: 0.3;
+          &__image{
+            cursor: pointer;
           }
           &__back{
             color: #fff;
@@ -74,7 +47,7 @@
         &__ex1 div{
           width: 200px;
           max-height: 100%;
-          padding: 20px;
+          padding: 20px 20px 60px;
         }
         &__ex1 img{
           max-width: 200px;
@@ -85,7 +58,6 @@
     }
   }
 }
-
 
 .glitch {
   position: relative;
@@ -101,17 +73,14 @@
       background: black;
       clip: rect(0, 0, 0, 0);
     }
-    
     &:before {
       left: -1px;
       text-shadow: 2px 0 rgba(red,0.7);
     }
-
     &:after {
       left: 1px;
       text-shadow: -2px 0 rgba(blue,0.7);
     }
-
   &:hover {
     &:before {
       text-shadow: 2px 0 rgba(red,0.7);
@@ -139,9 +108,3 @@
   75% { top: 0px; left: -4px; clip: rect(95px, 9999px, 53px, 0) }
   100% { top: -1px; left: -1px; clip: rect(31px, 9999px, 149px, 0) }
 }
-
-
-
-
-
-

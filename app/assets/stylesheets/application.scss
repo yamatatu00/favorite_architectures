@@ -21,16 +21,20 @@
 
 @import "./layouts/header";
 @import "./layouts/footer";
+@import "./layouts/details-modal";
 
 @import "./devise/user";
 
-@import "./users&products/show";
+@import "./users/show";
 
 @import "./products/topmain";
 @import "./products/products";
 @import "./products/about";
 @import "./products/new&edit";
 @import "./products/create&update";
+@import "./products/show";
+
+
 
 body {
   color: #fff;
@@ -38,3 +42,4 @@ body {
   font-size: 17px;
   // font-family: '超極細ゴシック体';
 }
+

@@ -1,4 +1,4 @@
-.products 
+.products
   .products__sections
     .products__sections__header
       -if controller_name == "products"
@@ -13,29 +13,16 @@
             - @products.each do |product| 
               %div
                 -if product.image.attached?
-                  =image_tag product.image
+                  =image_tag product.image, class: "products__sections__section__scroll-fade__ex1__image", id: "#{product.id}"
                 -else
-                  =image_tag "pnenoimgs001.gif"
-                %p
+                  =image_tag "pnenoimgs001.gif", class: "products__sections__section__scroll-fade__ex1__image", id: "#{product.id}"
+                %p.products__sections__section__scroll-fade__ex1__text
                   -if controller_name == "products"
-                    =product.user.name 
+                    =product.user.name + "'s post"
                     %br
                   %br
-                  = product.title
+                  = "title : " + product.title
                   %br
-                    %ul.products__sections__section__scroll-fade__ex1__buttons
-                      %li.products__sections__section__scroll-fade__ex1__buttons__button
-                        = link_to 'show', "/products/#{product.id}", method: :get, class: 'products__sections__section__scroll-fade__ex1__buttons__button__text'
-                      -if user_signed_in?  
-                        -if product.user_id == current_user.id 
-                          %li.products__sections__section__scroll-fade__ex1__buttons__button
-                            = link_to 'edit', "/products/#{product.id}/edit", method: :get, class: 'products__sections__section__scroll-fade__ex1__buttons__button__text'
-                          %li.products__sections__section__scroll-fade__ex1__buttons__button
-                            = link_to 'delete', "/products/#{product.id}", method: :delete, class: 'products__sections__section__scroll-fade__ex1__buttons__button__text'
           -if controller_name == "users"
             = link_to 'back', root_path, class: "products__sections__section__scroll-fade__ex1__back"
-          
-
-
-
-
+= render "layouts/details-modal"

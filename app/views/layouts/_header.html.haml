@@ -5,12 +5,13 @@
       -# %audio{controls:  "", src: "http://bbcsfx.acropolis.org.uk/assets/07069060.wav", class: 'header__inner__logo__sound'}
       -# %audio{controls: "", src: "http://bbcsfx.acropolis.org.uk/assets/07075037.wav", class: 'header__inner__logo__sound'}
     %a#about.header__inner__nav
-      %p.header__inner__nav__item about me
+      - if controller_name == "products"
+        %p.header__inner__nav__item about me
     = link_to new_product_path, class: "header__inner__nav" do
       %p.header__inner__nav__item product new
   - if user_signed_in?
     .header__inner__nav
-      = link_to "my page", "/users/#{current_user.id}", class: "header__inner__nav__item"
+      = link_to "#{current_user.name}'s page", "/users/#{current_user.id}", class: "header__inner__nav__item"
       = link_to "sign out", destroy_user_session_path, method: :delete, class: "header__inner__nav__item"
   - else
     .header__inner__nav

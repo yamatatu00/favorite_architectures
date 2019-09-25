@@ -4,22 +4,14 @@
       %p.about__sections__texts__first about me
       .about__sections__texts__bodies 
         .about__sections__texts__bodies__left-body 
-          %a.about__sections__texts__bodies__left-body__left-message 
+          %p.about__sections__texts__bodies__left-body__left-message  
+          %br 大学卒業後、アパレル店員を経て靴業界へ。主に、靴の設計図を作るパタンナーに従事。
+          %br 2019年、靴業界の再編にて会社が廃業。将来性がある業界に転職するため、tech:expart卒業し、現在転職活動中。
           .about__sections__texts__bodies__left-body__buttons
             = link_to "contact", root_path, class: "about__sections__texts__bodies__left-body__buttons__button"
             -# %input#text1{:type => "text", :value => ""}/
             -# %input#btn1.btn.btn-success{:onclick => "test1()", :type => "button", :value => "テスト"}/
         .about__sections__texts__bodies__right-body
           %a.about__sections__texts__bodies__right-body__right-message
-            -# nishi
-            -# %br 
-            -# osaka-city, OSAKA, JAPAN 
-            -# %br
-            -# %br
-            -# T 123-456-789 
-            -# %br
-            -# F 987-654-321
-            -# %br
-            -# hoge@test.com
-    .about__sections__image
-      = image_tag 'IMG_0128.jpg'
+          .about__sections__texts__bodies__right-body__image
+            = image_tag 'IMG_0128.jpg'

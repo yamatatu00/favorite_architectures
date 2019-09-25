@@ -56,9 +56,9 @@ $(function() {
       }
     });
 
-  $('.about__sections__image img').addClass('move');
+  $('.about__sections__texts__bodies__right-body__image').addClass('move');
   $(window).scroll(function(){
-    $(".about__sections__image").each(function(){
+    $(".about__sections__texts__bodies__right-body__image").each(function(){
       var imgPos = $(this).offset().top;    
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();

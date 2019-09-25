@@ -1,17 +1,14 @@
 .about{
-  height: 100vh;
+  height: 100%;
   background-color: #565654;
-  padding: 300px 150px 0;
+  padding: 150px;
 
   &__sections{
-    display: flex;
-    position: relative;
+    padding-top: 150px;
     
     &__texts{
       width: 100%;
       z-index: 10;
-      position: absolute;
-      left: 0;
 
       &__first{
         font-size: 30px;
@@ -20,11 +17,11 @@
       }
       &__bodies{
         width: 100%;
+        display: flex;
       
         &__left-body{
           width: 40%;
           min-height: 300px;
-          float: left;
           text-align: left;
           padding: 50px 0 0 30px;
 
@@ -32,13 +29,9 @@
             word-break: break-all;
           }
           &__buttons{
-            position: absolute;
-            bottom: 0;
+            padding-top: 150px;
             &__button{
-              width: 100px;
-              height: 20px;
-              padding: 20px;
-              margin: 10px;
+              padding: 12px;
               border-radius: 6px;
               background-color: #fff;
               color: black;
@@ -54,33 +47,29 @@
           }
         }
         &__right-body{
-          float: right;
-          width: 20%;
-          padding-top: 30px;
+          width: 35%;
 
           &__right-message{
             line-height: 50px;
             word-break: break-all;
           }
+          &__image {
+            z-index: 0;
+            padding-left: 200px;
+          }
+          &__image img{
+            width: 300px;
+            height: auto;
+            -webkit-transition: all 1s;
+            -webkit-transform: translate(0, 0);
+            opacity: 1; 
+          }
+          &__image img.move {
+            -webkit-transform: translate(-20px, 0);
+            opacity: 0.1;
+          }
         }
       }
-    }
-    &__image {
-      z-index: 0;
-      position: absolute;
-      right: 0;
-      padding: 30px 110px 0 0;
-    }
-    &__image img{
-      width: 300px;
-      height: auto;
-      -webkit-transition: all 1s;
-      -webkit-transform: translate(0, 0);
-      opacity: 1;     
-    }
-    &__image img.move {
-      -webkit-transform: translate(-10px, 0);
-      opacity: 0.1;
     }
   }
 }

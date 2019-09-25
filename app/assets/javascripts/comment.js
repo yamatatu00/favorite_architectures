@@ -1,6 +1,6 @@
 $(function() {
   $('#new-comment').on('submit', function(e) {
-    if ($('input[type=text]').val() == '') {
+    if ($('#comment').val() == '') {
       return false;
     }
     e.preventDefault();

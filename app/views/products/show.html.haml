@@ -1,7 +1,7 @@
 .show-contents
   .show-contents__content
     .show-contents__content__title
-      title :
+      Title :
       = @product.title
     .show-contents__content__image
       -if @product.image.attached?
@@ -31,5 +31,8 @@
                 = comment.user.name
                 ：
               = comment.comment
+    %br
+    %br
+    %br
     %br
     = link_to 'back', root_path, class: "show-contents__content__back"

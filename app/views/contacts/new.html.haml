@@ -1,0 +1,15 @@
+.newcontact-contents
+  = form_with(model:@contact, local: true) do |f|
+    .newcontact-contents__top
+      %h3.newproduct-contents__top__content Contact Us
+    .newcontact-contents__lists__title
+      = f.text_field :name, placeholder: "name"
+    .newcontact-contents__lists__title
+      = f.text_field :email, placeholder: "email"
+    .newcontact-contents__lists__text
+      = f.text_area :message, placeholder: "message"
+    .newcontact-contents__lists__btn
+      = f.submit 'SENT'
+    .newcontact-contents__lists__back
+      = link_to 'back', root_path
+

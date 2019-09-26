@@ -64,3 +64,16 @@ Haml、SCSS、Ruby、JavaScript、Ruby on Rails、VScode、PostgreSQL、MacOS、
 
 ### Association
 - belongs_to :product
+
+
+
+## contactsテーブル
+
+|Column           |Type    |Options                         |
+|-----------------|--------|--------------------------------|
+|name             |string  |null: false                     |
+|email            |string  |null: false                     |
+|message          |text    |null: false                     |
+
+### Association
+

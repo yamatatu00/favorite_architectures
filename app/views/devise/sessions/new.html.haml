@@ -10,11 +10,11 @@
         = f.label :password
         %br/
         = f.password_field :password, autocomplete: "current-password"
-      - if devise_mapping.rememberable?
-        .field
-          = f.check_box :remember_me
-          = f.label :remember_me
+      -# - if devise_mapping.rememberable?
+      -#   .field
+      -#     = f.check_box :remember_me
+      -#     = f.label :remember_me
       .contents__content__actions
         = f.submit "Log in"
       = link_to 'back', root_path
-    = render "devise/shared/links"
+    -# = render "devise/shared/links"

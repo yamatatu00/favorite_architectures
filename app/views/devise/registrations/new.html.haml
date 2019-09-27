@@ -2,7 +2,7 @@
   .contents__content
     %h2.contents__content__head Sign up
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-      = render "devise/shared/error_messages", resource: resource
+      -# = render "devise/shared/error_messages", resource: resource
       .contents__content__field
         = f.label :nickname
         %br/
@@ -22,4 +22,4 @@
       .contents__content__actions
         = f.submit "Sign up"
       = link_to 'back', root_path, class: "contents__content__back"
-    = render "devise/shared/links"
+    -# = render "devise/shared/links"

@@ -3,10 +3,16 @@
     .newcontact-contents__top
       %h3.newproduct-contents__top__content Contact Us
     .newcontact-contents__lists__title
+      = f.label :name, '返信先名'
+      %br/
       = f.text_field :name, placeholder: "name"
     .newcontact-contents__lists__title
+      = f.label :email, '返信先メール'
+      %br/
       = f.text_field :email, placeholder: "email"
     .newcontact-contents__lists__text
+      = f.label :message, 'お問い合わせ内容'
+      %br/
       = f.text_area :message, placeholder: "message"
     .newcontact-contents__lists__btn
       = f.submit 'SENT'

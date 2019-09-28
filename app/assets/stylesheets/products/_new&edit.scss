@@ -56,6 +56,7 @@
       background-color: #fff;
       color: #565654;
       text-decoration: none;
+      cursor: pointer;
     } 
     &__back{
       a{
@@ -70,12 +71,14 @@
 }
 #img_field {
   margin: 0 auto;
-  // width: 220px;
-  // max-height: 320px;
+  width: 330px;
   object-fit: cover;
   border-radius: 5px;
   cursor: pointer;
   overflow: hidden;
+}
+#img_field :hover{
+  opacity: 0.3;
 }
 
 

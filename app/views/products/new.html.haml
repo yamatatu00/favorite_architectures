@@ -6,6 +6,11 @@
       %li.newproduct-contents__lists__image
         #img_field{onclick: "$('#file').click()"}
         = form.file_field :image, placeholder: "image", id: "file",class: "image-form"
+      %h3.map-title map(Detailed map only in Japan)
+      .newproduct-contents__lists__map#map
+        = form.hidden_field :lat, id: 'lat', value: :lat 
+        = form.hidden_field :lng, id: 'lng', value: :lng 
+      %br
       %li.newproduct-contents__lists__title
         = form.text_field :title, placeholder: "title"
       %li.newproduct-contents__lists__text
@@ -14,6 +19,8 @@
         = form.submit "send"
       %li.newproduct-contents__lists__back
         = link_to 'back', root_path
+      %br
+      %br
 
 
 

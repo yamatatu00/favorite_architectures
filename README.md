@@ -12,6 +12,7 @@ Haml、SCSS、Ruby、JavaScript、Ruby on Rails、VScode、PostgreSQL、MacOS、
 ページネーション導入（kaminariのgemを使用）  
 各投稿へのコメント機能（Ajaxによる非同期通信）
 お問い合わせメール機能（Action Mailerにて、問い合わせ本人へ確認メールと管理者に問い合わせ内容メールを同時配信)
+Leaflet APIによる地図表示と各投稿に対して位置表示の実装（変更可、詳細地図は日本のみ）
 
 
 ## usersテーブル
@@ -34,13 +35,14 @@ Haml、SCSS、Ruby、JavaScript、Ruby on Rails、VScode、PostgreSQL、MacOS、
 |-----------------|-----------|--------------------------------|
 |title            |string     |null: false                     |
 |text             |string     |                                |
+|lat              |float      |                                |
+|lng              |float      |                                |
 |user_id          |references |null: false,foreign_key: true   |
 
 ### Association
 - belongs_to :user
 - has_one_attached :image
 - has_many   :comments
-
 
 
 
@@ -55,6 +57,7 @@ Haml、SCSS、Ruby、JavaScript、Ruby on Rails、VScode、PostgreSQL、MacOS、
 ### Association
 - belongs_to :product
 - belongs_to :user
+
 
 
 ## activestoragesテーブル

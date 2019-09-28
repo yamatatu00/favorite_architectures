@@ -32,6 +32,9 @@
         text-decoration: none;
       }
     }
+    &__nav :hover{
+      opacity: 0.3;
+    }
   }
 }
 #about{

@@ -1,6 +1,6 @@
 $(function() {
   function buildHTML(src,text_arry,id, url, name, show_name){
-    var addName = (url.match(/\/users\/\d+/)) ? `<p><br><br>${text_arry[0]}<br><br></p>` : `<p><br>${text_arry[0]}<br><br>${text_arry[1]}</p>`;
+    var addName = (url.match(/\/users\/\d+/)) ? `<p><br><br>${text_arry[1]}<br><br></p>` : `<p><br>${text_arry[0]}<br><br>${text_arry[2]}</p>`;
   
     var sinIn = (name == text_arry[0].slice(0,-7))||(name == show_name) ? `<li class="buttons__button">
                                                                             <a class="buttons__button__text" data-method="get" href="/products/${id}/edit">edit</a>
@@ -25,6 +25,7 @@ $(function() {
     var text_arry = text.filter(function(x){
       return !(x === ""); 
     })
+    console.log(text_arry)
     var src = $(this).attr('src');
     var id = $(this).attr('id');
     var url = location.href

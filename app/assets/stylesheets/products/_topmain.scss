@@ -3,18 +3,18 @@
   &__slider{
     position: relative;
     width: 100%;
-    
+
     &__left-contents{
       position: absolute;
       top: 0;
       left: 0;
-      width: 60%;
-      min-height: 100vh;
+      width: 65%;
+      height: 100%;
 
       &__content{
-        padding: 200px 0 200px;
+        padding: 300px 0 420px 20px;
         color: white;
-        max-height: 100vh;
+        height: 100%;
         line-height: 90px;
 
         &__site-title-sub{
@@ -34,8 +34,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 40%;
-      height: 100vh;
+      width: 35%;
     }
   }
   &__slider img {
@@ -43,7 +42,7 @@
     transform: scale(1.1);
     transition: 5s ease-out;
     width: 100%;
-    height: 100vh;
+    object-fit: cover;
   }
   &__slider .slick-active img {
     transform: scale(1.0);

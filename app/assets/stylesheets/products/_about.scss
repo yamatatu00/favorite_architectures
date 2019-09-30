@@ -20,7 +20,7 @@
         display: flex;
       
         &__left-body{
-          width: 40%;
+          width: 45%;
           min-height: 300px;
           text-align: left;
           padding: 50px 0 0 30px;
@@ -55,17 +55,17 @@
           }
           &__image {
             z-index: 0;
-            padding-left: 250px;
+            padding-left: 230px;
           }
           &__image img{
             width: 300px;
             height: auto;
-            -webkit-transition: all 1s;
+            -webkit-transition: all 2s;
             -webkit-transform: translate(0, 0);
             opacity: 1; 
           }
           &__image img.move {
-            -webkit-transform: translate(-30px, 0);
+            -webkit-transform: translate(-60px, 0);
             opacity: 0.1;
           }
         }

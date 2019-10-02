@@ -1,8 +1,14 @@
 .show-contents
   .show-contents__content
     .show-contents__content__title
-      Title :
+      Title : 
       = @product.title
+    .show-contents__content__name
+      Nickname : 
+      = @product.user.name
+    .show-contents__content__text
+      Explanatory text : 
+      = @product.text
     .show-contents__content__image
       -if @product.image.attached?
         =image_tag @product.image
@@ -23,14 +29,12 @@
           = link_to 'edit', "/products/#{@product.id}/edit", method: :get, class: 'show-contents__content__lists__list__text'
         %li.show-contents__content__lists__list
           = link_to 'delete', "/products/#{@product.id}", method: :delete, class: 'show-contents__content__lists__list__text'
-      .show-contents__content__name
-        nickname :
-        = @product.user.name
     .show-contents__content__container
       - if current_user
         = form_with(model: @comment, url: product_comments_path(@product.id), method: :post, class: "show-contents__content__container__textarea", id: "new-comment") do |form|
           = form.text_area :comment, placeholder: "コメントする"
-          = form.submit value: "SENT"
+          .show-contents__content__container__btn
+            = form.submit value: "SENT"
       %h4.show-contents__content__container__title ＜コメント一覧＞
       .show-contents__content__container__comments
         - if @comments

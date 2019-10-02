@@ -19,8 +19,7 @@
                 %p.products__sections__section__scroll-fade__ex1__text
                   -if controller_name == "products"
                     =product.user.name + "'s post"
-                  %i.fas.fa-heart
-                    = "1"
+                  = render "likes/like_form", product: product
                   %br
                   %br
                   = "Title : " + product.title

@@ -2,13 +2,26 @@
   &__content{
     height: 100%;
     background-color: #252625;
-    padding: 100px;
+    padding: 100px 470px 100px;
+    .fas{
+      float: right;
+      color: red;
+      cursor: pointer;
+    }
 
     &__title{
-      padding-bottom: 20px;
       height: 50px;
       font-size: 20px;
       font-weight: bold;
+    }
+    &__name{
+      margin: 10px;
+    }
+    &__text{
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // white-space: nowrap; 
+      word-wrap: break-word;
     }
     &__image{
       padding-bottom: 5px;
@@ -20,15 +33,17 @@
       object-fit: cover;
     }
     &__lists{
+      padding-bottom: 35px;
       &__list{
         display: block;
-        margin: 10px auto 10px;
+        margin: 0px 10px 0 0;
         width: 60px;
         height: 20px;
-        line-height: 20px;
+        line-height: 17px;
         background-color: #ffffff63;
         color: black;
         border-radius: 5px;
+        float: left;
 
         &__text{
           color: #fff;
@@ -37,11 +52,11 @@
         }
       }
     }
-    &__name{
-      margin: 10px;
-      padding-top: 40px;
+    &__lists :hover{
+      opacity: 0.7;
     }
     &__container{
+      padding-top: 30px;
       &__textarea{
         margin: 0 auto;
         textarea{
@@ -62,6 +77,12 @@
           font-size: 12px;
           cursor: pointer;
         } 
+        input :hover{
+          opacity: 0.7;
+        }
+      }
+      &__btn :hover{
+        opacity: 0.7;
       }
       &__title{
         padding-top: 30px;

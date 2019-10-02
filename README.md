@@ -77,7 +77,7 @@ Leaflet APIによる地図表示と各投稿に対して位置表示の実装（
 
 
 
-## activestoragesテーブル
+## active storagesテーブル
 
 |name             |record_type    |
 |-----------------|---------------|

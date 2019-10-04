@@ -1,5 +1,7 @@
 $(function() {
   function buildHTML(src,text_arry,id, url, name, show_name){
+    var addLike = (url.match(/\/users\/\d+/)) ? `<i class="fas fa-heart">${text_arry[0]}</i>` : `<i class="fas fa-heart">${text_arry[1]}</i>`;
+
     var addName = (url.match(/\/users\/\d+/)) ? `<p><br><br>${text_arry[1]}<br><br></p>` : `<p><br>${text_arry[0]}<br><br>${text_arry[2]}</p>`;
   
     var sinIn = (name == text_arry[0].slice(0,-7))||(name == show_name) ? `<li class="buttons__button">
@@ -9,6 +11,7 @@ $(function() {
                                                                               <a class="buttons__button__text" rel="nofollow" data-method="delete" href="/products/${id}">delete</a>
                                                                             </li>` : ``;
     var html = `<img src="${src}" alt="画像">
+                ${addLike} 
                 ${addName} 
                 <ul class="buttons">
                   <li class="buttons__button">
@@ -25,7 +28,6 @@ $(function() {
     var text_arry = text.filter(function(x){
       return !(x === ""); 
     })
-    console.log(text_arry)
     var src = $(this).attr('src');
     var id = $(this).attr('id');
     var url = location.href

@@ -30,6 +30,11 @@
       height: 350px;
       object-fit: cover;
     }
+    .fas{
+      pointer-events:none;
+      margin-right: 10px;
+      letter-spacing: 5px;
+    }
     p{
       color: black;
     }

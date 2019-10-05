@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @products = Product.all.includes(:user).page(params[:page]).per(12).order('id DESC')
+    @products = Product.all.with_attached_image.includes(:user).page(params[:page]).per(12).order('id DESC')
   end
 
   def new

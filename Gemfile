@@ -50,6 +50,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'letter_opener'
   gem 'letter_opener_web'
+  gem 'bullet'
 end
 
 group :test do
@@ -70,7 +71,7 @@ gem "haml-rails"
 gem "jquery-rails"
 gem 'font-awesome-sass', '~> 5.0.6'
 gem "devise", ">= 4.7.1"
-gem  "watson-api-client"
 gem 'aws-sdk-s3', require: false
 gem 'kaminari'
 gem 'dotenv-rails'
+

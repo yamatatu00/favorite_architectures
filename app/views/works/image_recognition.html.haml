@@ -1,0 +1,25 @@
+.image_recognition
+  .image_recognition__title  App Name: Image search
+  .image_recognition__content
+    .image_recognition__content__mov
+      = video_tag "image_recognition.mp4", :autoplay => true, :loop => true
+    .image_recognition__content__text
+      .image_recognition__content__text__title アプリ詳細
+      類似画像検索アプリ
+      %br
+      .image_recognition__content__text__title 開発環境
+      Haml、SCSS、Ruby、JavaScript、Ruby on Rails、VScode、PostgreSQL、MacOS
+      %br
+      (ローカル環境下のみ)
+      %br
+      .image_recognition__content__text__title 実装した機能
+      Clarifai APIによる画像認識機能 
+      %br
+      Pixabay APIによる画像検索機能 
+      %br
+      .image_recognition__content__text__title 内容
+      画像入力後、その画像を認識し、類似度が高いラベルを表示。
+      %br
+      類似度を棒グラフにて表示し、それぞれのラベルに対し、類似画像を各5枚表示する
+  .image_recognition__back
+    = link_to 'back', root_path, class: "image_recognition__back__link"

@@ -1,16 +1,19 @@
 .about
   .about__sections
     .about__sections__texts
-      %p.about__sections__texts__first about me
+      .about__sections__texts__first about me
       .about__sections__texts__bodies 
         .about__sections__texts__bodies__left-body 
           %p.about__sections__texts__bodies__left-body__left-message  
           %br 大学卒業後、アパレル店員を経て靴業界へ。主に、靴の設計図を作るパタンナーとして従事。
           %br 2019年、靴業界の再編にて会社が廃業。将来性がある業界に転職するため、tech:expartを卒業し、現在転職活動中。
+          .about__sections__texts__bodies__left-body__mywork 
+            my other work
+          .about__sections__texts__bodies__left-body__link 
+            %li
+              = link_to 'Image Recognition', image_recognition_works_path
           .about__sections__texts__bodies__left-body__buttons
             = link_to "contact", new_contacts_path, class: "about__sections__texts__bodies__left-body__buttons__button"
-            -# %input#text1{:type => "text", :value => ""}/
-            -# %input#btn1.btn.btn-success{:onclick => "test1()", :type => "button", :value => "テスト"}/
         .about__sections__texts__bodies__right-body
           %a.about__sections__texts__bodies__right-body__right-message
           .about__sections__texts__bodies__right-body__image

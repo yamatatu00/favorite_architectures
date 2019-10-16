@@ -28,8 +28,25 @@
           &__left-message{
             word-break: break-all;
           }
+          &__mywork{
+            font-size: 25px;
+            font-weight: bold;
+            padding: 125px 0 0 100px;
+            
+          }
+          &__link{
+            padding-top: 30px;
+            a{
+              text-decoration: none;
+              color: #fff;
+              font-size: 20px;
+            }
+          }
+          &__link :hover{
+            opacity: 0.5;
+          }
           &__buttons{
-            padding-top: 150px;
+            padding-top: 100px;
             &__button{
               padding: 12px;
               border-radius: 6px;

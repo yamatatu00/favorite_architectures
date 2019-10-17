@@ -36,14 +36,14 @@
           }
           &__link{
             padding-top: 30px;
+            width: 160px;
             a{
-              text-decoration: none;
               color: #fff;
               font-size: 20px;
             }
-          }
-          &__link :hover{
-            opacity: 0.5;
+            :hover{
+              opacity: 0.5;
+            }
           }
           &__buttons{
             padding-top: 100px;

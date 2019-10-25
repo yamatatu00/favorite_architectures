@@ -32,7 +32,7 @@
     .show-contents__content__container
       - if current_user
         = form_with(model: @comment, url: product_comments_path(@product.id), method: :post, class: "show-contents__content__container__textarea", id: "new-comment") do |form|
-          = form.text_area :comment, placeholder: "コメントする"
+          = form.text_area :comment, placeholder: "コメントする", id: "comment"
           .show-contents__content__container__btn
             = form.submit value: "SENT"
       %h4.show-contents__content__container__title ＜コメント一覧＞

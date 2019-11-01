@@ -17,7 +17,7 @@ Leaflet APIによる地図表示と各投稿に対して位置表示の実装（
 
 # テスト
 Userモデルのバリデーション単体テスト  
-ProductsControllerのコントローラー単体テスト(new,edit)  
+ProductsControllerのコントローラー単体テスト(new,edit,indexアクション)  
 
 
 ## usersテーブル

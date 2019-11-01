@@ -15,6 +15,10 @@ Haml、SCSS、Ruby、JavaScript、Ruby on Rails、VScode、PostgreSQL、MacOS、
 Leaflet APIによる地図表示と各投稿に対して位置表示の実装（変更可、詳細地図は日本のみ）  
 非同期でのいいね機能  
 
+# テスト
+Userモデルのバリデーション単体テスト  
+ProductsControllerのコントローラー単体テスト(new,edit,indexアクション)  
+
 
 ## usersテーブル
 

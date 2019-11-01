@@ -5,6 +5,9 @@ FactoryBot.define do
     lat         {34.1572726930187}
     lng         {129.276123046875}
     likes_count {1}
+
+    created_at { Faker::Time.between(from: DateTime.now - 2, to: DateTime.now) }
+
     user
 
     after(:build) do |product|

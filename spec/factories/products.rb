@@ -1,12 +1,11 @@
 FactoryBot.define do
   factory :product do
-    title       {"test"}
-    text        {"hello!"}
-    lat         {34.1572726930187}
-    lng         {129.276123046875}
-    likes_count {1}
-
-    created_at { Faker::Time.between(from: DateTime.now - 2, to: DateTime.now) }
+    title       {Faker::Lorem.word}
+    text        {Faker::Lorem.sentence}
+    lat         {Faker::Address.latitude}
+    lng         {Faker::Address.longitude}
+    likes_count {Faker::Number.digit}
+    created_at  { Faker::Time.between(from: DateTime.now - 2, to: DateTime.now) }
 
     user
 

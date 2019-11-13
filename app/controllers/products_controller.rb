@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  # before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @products = Product.all.with_attached_image.includes(:user).page(params[:page]).per(12).order('id DESC')
